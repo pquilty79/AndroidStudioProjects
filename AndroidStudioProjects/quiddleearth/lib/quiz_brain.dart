@@ -50,9 +50,11 @@ class QuizBrain {
     Question(
         q: 'Boromir wanted to use the ring against Sauron as a weapon to defend Gondor',
         a: true),
-    Question(q: 'Saruman wanted to get to ring for Sauron', a: false),
     Question(
-        q: 'When Gandalf teh Grey visited Orthanc, he found Saruman the White had become Saruman of Many Colors',
+        q: 'Saruman the White wanted to get to get the One Ring for his master, Sauron',
+        a: false),
+    Question(
+        q: 'When Gandalf the Grey visited Orthanc, he found Saruman the White had become Saruman of Many Colors',
         a: true),
     Question(
         q: 'At the Council of Elrond, Bilbo offered to take the ring to Mordor',
@@ -62,6 +64,15 @@ class QuizBrain {
         a: false),
     Question(
         q: 'Gildor suggested that they toss the one ring into the ocean to eliminate its threat',
+        a: false),
+    Question(
+        q: 'A primary reason for Balin\'s expedition to reclaim Moria was the potential recovery of the dwarvish ring of power belonging to Thror',
+        a: true),
+    Question(
+        q: 'Thror\'s ring of power went to his son, Thrain, from whom it was taken in the dungeons of Dul Goldur',
+        a: true),
+    Question(
+        q: 'Gandalf did not join Aragorn, Legolas, and Gimli at Helm\'s Deep right away in order to search for the armies of Éomer who were dispersed at the second battle of the ford of Isen',
         a: false),
   ];
 
@@ -77,12 +88,10 @@ class QuizBrain {
   void randomQuestion() {
     final random = Random();
     _questionNumber = random.nextInt(_questionBank.length);
-    // var newQuestion = random.nextInt(_questionBank.length);
     if (_answeredQuestions.length < 15) {
       if (_answeredQuestions.contains(_questionNumber)) {
         _questionNumber = random.nextInt(_questionBank.length);
       } else {
-        // _questionNumber = newQuestion;
         _answeredQuestions.add(_questionNumber);
       }
     }

@@ -1,13 +1,4 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
-
-// void main() {
-//   runApp(
-//     const RestartWidget(
-//       child: QuiddleEarth(),
-//     ),
-//   );
-// }
 
 class RestartWidget extends StatefulWidget {
   const RestartWidget({required this.child});

@@ -71,8 +71,7 @@ class _QuizPageState extends State<QuizPage> {
           context: context,
           type: AlertType.success,
           title: "GAME OVER",
-          desc:
-              "O Elbereth! Gilthoniel! We still remember, we who dwell, In this far land beneath the trees,Thy starlight on the Western Seas",
+          desc: "You are counted among the wise",
           buttons: [
             DialogButton(
               child: const Text(
